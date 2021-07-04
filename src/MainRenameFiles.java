@@ -2,8 +2,6 @@ import java.io.File;
 import java.io.IOException;
 
 
-import static java.lang.Math.random;
-
 public class MainRenameFiles {
 
     public static void main(String[] args) throws IOException {
