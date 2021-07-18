@@ -2,19 +2,20 @@ package Interfaces;
 
 import java.util.ArrayList;
 
+
 public class Main1 {
     public static void main(String[] args) {
         Programmer programmer = new Programmer("Вася");
         Programmer programmer1 = new Programmer("Коля");
         Programmer programmer2 = new Programmer("Саша");
 
-        Cook cook1 = new Cook("Маша");
-        Cook cook2 = new Cook("Таня");
-        Cook cook3 = new Cook("Оля");
+       Cook cook1 = new Cook("Маша");
+       Cook cook2 = new Cook("Таня");
+       Cook cook3 = new Cook("Оля");
 
-        Driver driver1 = new Driver("Игорь");
-        Driver driver2 = new Driver("Миша");
-        Driver driver3 = new Driver("Леонид");
+       Driver driver1 = new Driver("Игорь");
+       Driver driver2 = new Driver("Миша");
+       Driver driver3 = new Driver("Леонид");
 
         ArrayList<Employee> employees = new ArrayList<>();
         employees.add(programmer);
