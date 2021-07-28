@@ -92,4 +92,9 @@ public class Box {
         System.out.println("длина " + length );
         System.out.println("высота " + height );
     }
+
+    @Override
+    public String toString() {
+        return "Ширина: " + width + "\nДлина: " + length + "\nВысота: " + height;
+    }
 }

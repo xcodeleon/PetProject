@@ -1,6 +1,7 @@
 package OOP.main;
 
 import OOP.box.Box;
+import OOP.test.Empty;
 
 public class BoxMain {
     public static void main(String[] args) {
@@ -8,6 +9,8 @@ public class BoxMain {
         Box box2 = new Box(10,10,10);
         Box box3 = box1.sumBox(box2);
         Box box4 = new Box(box1, box3);
+        Empty empty = new Empty();
+        empty.toString();
 
         box1.showVolume();
         box2.showVolume();
@@ -16,6 +19,6 @@ public class BoxMain {
         double volumeSum = box1.volume() + box3.volume();
 
         System.out.println("box1 + box3 = " + volumeSum);
-
+        System.out.println(box2.toString());
     }
 }

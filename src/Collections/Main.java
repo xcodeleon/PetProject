@@ -1,4 +1,4 @@
-package Collections.main;
+package Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +22,6 @@ public class Main {
         for (int i = 0; i < employees.getSize(); i++) {
             System.out.println(employees.get(i));
         }
-
     }
 }
 
