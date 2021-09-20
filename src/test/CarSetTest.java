@@ -1,5 +1,8 @@
-package collections;
+package test;
 
+import collections.Car;
+import collections.CarHashSet;
+import collections.CarSet;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,11 +10,11 @@ import static org.junit.Assert.*;
 
 public class CarSetTest {
 
-    private CarSet carSet;
+    private CarSet<Car> carSet;
 
     @Before
     public void setUp() throws Exception {
-        carSet = new CarHashSet();
+        carSet = new CarHashSet<>();
         for (int i = 0; i < 100; i++) {
             carSet.add(new Car("Brand" + i, i));
         }

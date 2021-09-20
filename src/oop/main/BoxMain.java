@@ -1,7 +1,7 @@
 package oop.main;
 
 import oop.box.Box;
-import oop.test.Empty;
+import test.Empty;
 
 public class BoxMain {
     public static void main(String[] args) {

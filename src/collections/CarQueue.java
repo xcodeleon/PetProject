@@ -1,10 +1,9 @@
 package collections;
 
-public interface CarQueue extends CarCollection {
+public interface CarQueue<T> extends CarCollection<T> {
 
-    boolean add(Car car);
-
-    Car peek();
-    Car poll();
+    boolean add(T car);
+    T peek();
+    T poll();
 
 }

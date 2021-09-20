@@ -1,16 +1,19 @@
-package collections;
+package test;
 
+import collections.Car;
+import collections.CarLinkedList;
+import collections.CarQueue;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class CarQueueTest {
-    private CarQueue queue;
+    private CarQueue<Car> queue;
 
     @Before
-    public void setUp () throws Exception {
-        queue = new CarLinkedList();
+    public void setUp() throws Exception {
+        queue = new CarLinkedList<>();
         for (int i = 0; i < 10; i++) {
             queue.add(new Car("Brand" + i, i));
         }

@@ -3,19 +3,19 @@ package collections;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class CarArrayList implements CarList {
+public class CarArrayList<T> implements CarList<T> {
 
-    Car[] array = new Car[10];
+    private Object[] array = new Object[10];
     int size = 0;
 
     @Override
-    public Car get(int index) {
+    public T get(int index) {
         checkIndex(index);
-        return array[index];
+        return (T) array[index];
     }
 
     @Override
-    public boolean add(Car car) {
+    public boolean add(T car) {
         if (size >= array.length) {
             array = Arrays.copyOf(array, array.length * 2);
         }
@@ -25,7 +25,7 @@ public class CarArrayList implements CarList {
     }
 
     @Override
-    public boolean add(Car car, int index) {
+    public boolean add(T car, int index) {
         increaseArray();
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
@@ -45,7 +45,7 @@ public class CarArrayList implements CarList {
     }
 
     @Override
-    public boolean remove(Car car) {
+    public boolean remove(T car) {
         for (int i = 0; i < size; i++) {
             if (array[i].equals(car)) {
                 return removeAt(i);
@@ -54,7 +54,7 @@ public class CarArrayList implements CarList {
         return false;
     }
 
-    public boolean contains(Car car) {
+    public boolean contains(T car) {
         for (int i = 0; i < size; i++) {
             if (array[i].equals(car)) {
                 return true;
@@ -70,14 +70,13 @@ public class CarArrayList implements CarList {
 
     @Override
     public void clear() {
-        array = new Car[10];
+        array = new Object[10];
         size = 0;
     }
 
     @Override
-    public Iterator<Car> iterator() {
-        return new Iterator<Car>() {
-
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
             int index = 0;
 
             @Override
@@ -86,8 +85,8 @@ public class CarArrayList implements CarList {
             }
 
             @Override
-            public Car next() {
-                return array[index++];
+            public T next() {
+                return (T) array[index++];
             }
         };
     }

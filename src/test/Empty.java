@@ -1,4 +1,4 @@
-package oop.test;
+package test;
 
 public class Empty {
 }

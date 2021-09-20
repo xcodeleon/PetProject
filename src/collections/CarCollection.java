@@ -1,9 +1,9 @@
 package collections;
 
-public interface CarCollection extends Iterable<Car> {
-    boolean add(Car car);
+public interface CarCollection<T> extends Iterable<T> {
+    boolean add(T car);
 
-    default boolean remove(Car car) {
+    default boolean remove(T car) {
         return false;
     }
 
@@ -13,5 +13,5 @@ public interface CarCollection extends Iterable<Car> {
 
     }
 
-    boolean contains(Car car);
+    boolean contains(T car);
 }
