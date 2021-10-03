@@ -2,15 +2,23 @@ package generics;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class BoxTest {
 
     @Test
     public void testBox() {
-        Box<String, Integer, Float> box1 = new Box<>("Box 1", 5, 4.9f);
-        Box<String, Integer, Float> box2 = new Box<>("Box 2", 7, 8.1f);
-        float result = box1.getValue() + box1.getFloats() + box2.getValue() + box2.getFloats();
-        assertEquals(25.0, result, 0.0001);
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+             numbers.add(i);
+        }
+        List<Number> numbers2 = new ArrayList<>();
+
+        Box.transfer(numbers, numbers2);
+        assertEquals(0, numbers.size());
+        assertEquals(10, numbers2.size());
     }
 }
