@@ -12,7 +12,7 @@ public class MainMFP {
 
         new Thread(new Runnable() {
             @Override
-            public void run ( ) {
+            public void run() {
                 mfp.scan(1);
             }
         }).start();
